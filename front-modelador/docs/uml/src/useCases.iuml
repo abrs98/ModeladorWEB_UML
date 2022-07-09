@@ -1,0 +1,27 @@
+@startuml useCases
+  left to right direction
+  actor "Alumno" as usr
+  rectangle DiagramadorUML {
+    usecase "Crear diagrama" as uc1
+    usecase "Guardar diagrama" as uc2
+    usecase "Cargar diagrama" as uc3
+    usecase "Eliminar diagrama" as uc4
+    usecase "Cambiar nombre de diagrama" as uc5
+    usecase "Cargar template" as uc6
+    usecase "Eliminar template" as uc7
+    usecase "Cambiar nombre de template" as uc8
+    usecase "Guardar como template" as uc9
+    usecase "Guardar como imagen" as uc10
+
+    usr --> uc1
+    usr --> uc2
+    usr --> uc3
+    usr --> uc4
+    usr --> uc5
+    usr --> uc6
+    usr --> uc7
+    usr --> uc8
+    usr --> uc9
+    usr --> uc10
+  }
+@enduml

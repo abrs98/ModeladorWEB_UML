@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  api-modelador-uml:
+    image: api-modelador-uml
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3015
+    command: ["npm", "start"]

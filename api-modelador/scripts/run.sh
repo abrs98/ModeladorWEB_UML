@@ -1,0 +1,1 @@
+docker run --memory 512m api-modelador-uml

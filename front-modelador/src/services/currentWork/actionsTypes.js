@@ -1,0 +1,12 @@
+export const INIT_WORK = 'INIT_WORK';
+export const SET_NAME = 'SET_NAME';
+export const SET_PROJECT_PROPS = 'SET_PROJECT_PROPS';
+export const UPDATING_ASSOCIATION_IDS = 'UPDATING_ASSOCIATION_IDS';
+export const ADD_ITEM = 'ADD_ITEM';
+export const UPDATE_ITEM = 'UPDATE_ITEM';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const SAVE_WORK = 'SAVE_WORK';
+export const UNSAVE_WORK = 'UNSAVE_WORK';
+export const SET_CURR_SELECT = 'SET_CURR_SELECT';
+export const SET_LAST_SELECT = 'SET_LAST_SELECT';
+export const REPLACE_WORK = 'REPLACE_WORK';

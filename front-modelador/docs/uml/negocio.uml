@@ -1,0 +1,60 @@
+@startuml negocio
+    package negocio {
+        class elementoRobustez {
+            #connections: array
+            #tipo: elementoEnum
+            #linea: linea
+            #texto: texto
+            #nota: nota
+        }
+
+        class linea {
+            #texto: texto
+            __
+            #validar()
+        }
+        linea "2" -- "0..1" elementoRobustez
+
+        class dirigida {
+
+        }
+        dirigida --|> linea
+
+        class noDirigida {
+
+        }
+        noDirigida --|> linea
+
+        class texto {
+            #string: string
+            #svg: string
+        }
+        texto --* linea
+        texto --* elementoRobustez
+
+        class dibujo {
+            #svg: string
+        }
+        dibujo --* elementoRobustez
+
+        class nota {
+            #sring: string
+        }
+        nota --* elementoRobustez
+
+        enum elementoEnum <<enumeration>> {
+            CONTROL
+            BOUNDARY
+            ENTITY
+            ACTOR
+            LINE
+        }
+
+        dibujo --> elementoEnum
+        elementoRobustez --> elementoEnum
+        linea --> elementoEnum
+    }
+
+    hide circle
+
+@enduml

@@ -1,0 +1,7 @@
+{
+  "testRegex": "((\\.|/*.)(spec))\\.jsx?$",
+  "transform": {
+    "^.+\\.svg$": "jest-svg-transformer",
+    "^.+\\.(js|jsx)$": "babel-jest"
+  }
+}

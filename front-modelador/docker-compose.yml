@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  react-dev-modelador-uml:
+    container_name: react-dev-modelador-uml
+    image: react-dev-modelador-uml
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/usr/src/app"
+      - "/usr/src/app/node_modules"
+    stdin_open: true
+    command: npm start

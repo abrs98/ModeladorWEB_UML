@@ -1,0 +1,32 @@
+<svg id="Capa_8"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 43.81 43.81">
+  <defs>
+      <style>
+        .cls-1{fill:none;stroke:#0000008A;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2;}
+      </style>
+      <marker
+        id='head2' orient="auto" viewBox="0 0 7 6"
+        markerWidth='6' markerHeight='6'
+        refX='1' refY='1'
+      >
+        <path d='M0,0 V2 L1,1 Z' fill="#000000DD" stroke="#000000DD" />
+      </marker>
+    <marker
+      id='head' orient="auto"
+      markerWidth='12' markerHeight='12'
+      refX='5' refY='6'
+    >
+      <!-- triangle pointing right (+x) -->
+      <path d='M0,0 V12 L6,6 Z' fill="#000000DD" />
+    </marker>
+  </defs>
+  <title>arrow</title>
+  <line
+    marker-end='url(#head)'
+    class="cls-1"
+    x1="0.5"
+    y1="43.31"
+    x2="43.31"
+    y2="0.5" />
+</svg>

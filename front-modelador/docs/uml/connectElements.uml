@@ -1,0 +1,20 @@
+@startuml connectElements
+    usuario -> Sidebar: seleccionar linea
+    Sidebar -> usuario: resaltar elemento seleccionado
+    Sidebar -> App: itemSelected()
+    App -> Canvas: props.newItem
+    usuario -> Canvas: seleccionar elemento 1
+    Canvas -> usuario: mostrar linea guia
+    loop hasta seleccionar elemento 2
+        usuario -> Canvas: mover mouse
+        Canvas -> Canvas: onMouseMove()
+        Canvas -> usuario: mostrar linea temporal actualizada
+    end
+    usuario -> Canvas: seleccionar elemento 2
+    Canvas -> Canvas: drawItem()
+    Canvas -> linea: validar()
+    Canvas -> itemsList: pushLine()
+    itemsList -> itemsList: vincular()
+    itemsList --> Canvas
+    Canvas -> usuario: mostrar diagrama actualizado
+@enduml

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": ["./src/config/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@services/*": ["./src/services/*"],
+      "@shared/*": ["./src/shared/*"],
+      "@assets/*": ["./src/shared/assets/*"],
+      "@constants/*": ["./src/shared/constants/*"],
+      "@hooks/*": ["./src/shared/hooks/*"],
+      "@libs/*": ["./src/shared/libs/*"],
+    }
+  },
+  "exclude": [
+    "build",
+    "docs",
+    "node_modules",
+    "public",
+    "scripts"
+  ]
+}

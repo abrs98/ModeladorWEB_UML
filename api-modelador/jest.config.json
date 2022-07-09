@@ -1,0 +1,16 @@
+{
+  "testRegex": ".spec.js$",
+  "moduleDirectories": [
+    "src/**/__tests__/*.js",
+    "/node_modules/"
+  ],
+  "coveragePathIgnorePatterns": [
+    ".gcloud",
+    ".vscode",
+    "build",
+    "config",
+    "coverage",
+    "logs",
+    "scripts"
+  ]
+}

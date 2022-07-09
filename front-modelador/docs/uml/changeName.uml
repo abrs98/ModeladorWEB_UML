@@ -1,0 +1,10 @@
+@startuml changename
+    usuario -> Canvas: doble click en elemento
+    Canvas -> txtName: props.toEdit
+    txtName -> usuario: mostrar input text
+    usuario -> txtName: escribir en input text
+    txtName -> txtName: editName()
+    txtName -> itemsList: setText()
+    itemsList --> Canvas 
+    Canvas -> usuario: mostrar texto actualizado
+@enduml

@@ -1,0 +1,37 @@
+{
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "prettier/react"
+  ],
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel", "prettier", "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-console": "off",
+    "no-var": [
+      "error"
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@material-ui/*/*/*", "!@material-ui/core/test-utils/*"]
+      }
+    ],
+    "prettier/prettier": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "16.14.0"
+    }
+  }
+}

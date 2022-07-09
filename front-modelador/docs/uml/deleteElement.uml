@@ -1,0 +1,11 @@
+@startuml delete
+    usuario -> Canvas: seleccionar elemento
+    Canvas -> Canvas: objSelected()
+    Canvas -> ActionButtons: props.objSelected
+    ActionButtons -> usuario: mostrar botones
+    usuario -> ActionButtons: seleccionar borrar
+    ActionButtons -> ActionButtons: delete()
+    ActionButtons -> itemsList: delete()
+    itemsList --> Canvas 
+    Canvas -> usuario: mostrar diagrama actualizado
+@enduml

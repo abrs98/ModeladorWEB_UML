@@ -1,0 +1,27 @@
+<svg
+  id="Capa_3"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 43.81 49.92"
+>
+  <style type="text/css">
+    .cls-1{fill:none;stroke:#0000008A;stroke-miterlimit:10;stroke-width:2;}
+  </style>
+  <title>control</title>
+  <circle
+    class="cls-1"
+    cx="21.91"
+    cy="28.01"
+    r="21.41" />
+  <line
+    class="cls-1"
+    x1="28.21"
+    y1="12.91"
+    x2="21.91"
+    y2="6.61" />
+  <line
+    class="cls-1"
+    x1="21.91"
+    y1="6.61"
+    x2="28.16"
+    y2="0.35" />
+</svg>

@@ -1,0 +1,27 @@
+<svg
+  id="Capa_2"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 48.99 43.81"
+>
+  <style type="text/css">
+    .cls-1{fill:none;stroke:#0000008A;stroke-miterlimit:10;stroke-width:2;}
+  </style>
+  <title>boundary</title>
+  <circle
+    class="cls-1"
+    cx="27.08"
+    cy="21.91"
+    r="21.41" />
+  <line
+    class="cls-1"
+    x1="0.5"
+    y1="0.5"
+    x2="0.5"
+    y2="43.31" />
+  <line
+    class="cls-1"
+    x1="0.5"
+    y1="21.91"
+    x2="5.68"
+    y2="21.91" />
+</svg>

@@ -1,0 +1,15 @@
+@startuml moveElement
+    usuario -> Canvas: seleccionar elemento sin soltar
+    Canvas -> Canvas: onMouseDown()
+    Canvas -> Canvas: objSelected()
+    loop hasta soltar el elemento
+        usuario -> Canvas: arrastrar elemento
+        Canvas -> Canvas: onMouseMove()
+        Canvas -> itemsList: setXY()
+        itemsList --> Canvas
+        Canvas -> usuario: mostrar diagrama actualizado
+    end
+    usuario -> Canvas: soltar elemento
+    Canvas -> Canvas: onMouseUp()
+    Canvas -> usuario: mostrar diagrama actualizado
+@enduml

@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-env",
+    "@babel/preset-flow"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-class-properties",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@config": "./src/config",
+        "@layout": "./src/layout",
+        "@providers": "./src/providers",
+        "@services": "./src/services",
+        "@shared": "./src/shared/*",
+        "@assets": "./src/shared/assets",
+        "@constants": "./src/shared/constants",
+        "@hooks": "./src/shared/hooks",
+        "@libs": "./src/shared/libs"
+      }
+    }]
+  ],
+  "ignore": [
+    "node_modules",
+    "build",
+    "docs",
+    "scripts"
+  ]
+}

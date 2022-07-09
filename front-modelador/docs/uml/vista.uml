@@ -1,0 +1,141 @@
+@startuml vista
+
+    class materialUI <<externo>>
+    class reactLineto <<externo>>
+
+    package vista{
+        class App <<react component>> {
+            __state__
+            #alerta: string
+            #isCanvasMouseDown: boolean
+            #itemSelected: object
+            #open: boolean
+            __methods__
+            #itemSelected()
+            #handleMouseMove()
+            #handleAlerta()
+            #handleMenu()
+            #handleCanvasDragging()
+        }
+        
+        class Header <<react component>> {
+            __hooks__
+            ..state..
+            #anchorEl:
+            __props__
+            #style
+            #menu()
+            __methods__
+            #handleChange()
+            #handleClick()
+            #handleClose()
+        }
+        App *-- Header
+
+        class Sidebar <<react component>> {
+            __state__
+            #itemSelected
+            #listsInfo:Array
+            __props__
+            #style: object
+            #unselected: boolean
+            #itemSelected()
+            __methods__
+            #handleClick()
+            #itemSelected()
+        }
+        App *-- Sidebar
+
+        class NewItem <<react component>> {
+            __state__
+            #x: number
+            #y: number
+            __props__
+            #item: number
+            #x: number
+            #y: number
+        }
+        App *-- NewItem
+
+        class Canvas <<react component>> {
+            __state__
+            #isMouseDown: boolean
+            #line: object
+            #newItem: object
+            #obj1:
+            #obj2:
+            #selectCords: object
+            #temporalLine: boolean
+            #xDown: number
+            #yDown: number
+            __props__
+            #newItem: object
+            #onMouseDown
+            #alerta()
+            __methods__
+            #drawItem()
+            #onMouseDown()
+            #onMouseMove()
+            #objSelected()
+            #updateWindowDimensions()
+        }
+        App *-- Canvas
+
+        class ActionButtons <<react component>> {
+            __state__
+            #objSelected: object
+            #note: string
+            __props__
+            #left: number
+            #top: number
+            #objSelected: object
+            #onDelete()
+            __methods__
+            #delete()
+            #editNote()
+        }
+        Canvas *-- ActionButtons
+
+        class TxtName <<react component>> {
+            __state__
+            #toEdit: object
+            __props__
+            #x: number
+            #y: number
+            #isActive: boolean
+            #toEdit: object
+            #rest()
+            __methods__
+            #handleEdit()
+            #editName()
+            #selectName()
+        }
+        Canvas *-- TxtName
+
+        class coordsCalc {
+            __
+            #centerPoint()
+            #lineTextPosition()
+        }
+        Canvas <-- coordsCalc
+
+        class itemsList{
+            #elements: Array
+            #counter: Array
+            __
+            #push()
+            #pushLine()
+            #vincular()
+            #delete()
+        }
+        itemsList --> Canvas
+
+        App *-- materialUI
+        Sidebar *-- materialUI
+        Header *-- materialUI
+        ActionButtons *-- materialUI
+        reactLineto --* Canvas
+
+    }
+    hide circle
+@enduml

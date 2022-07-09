@@ -1,0 +1,7 @@
+@startuml paquetes
+    folder negocio
+
+    folder vista
+
+    negocio <-- vista
+@enduml

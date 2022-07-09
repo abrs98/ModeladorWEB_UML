@@ -1,0 +1,7 @@
+.gcloud/
+.vscode/
+build/
+coverage/
+logs/
+node_modules/
+scripts/

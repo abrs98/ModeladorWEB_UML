@@ -1,0 +1,13 @@
+@startuml addNote
+    usuario -> Canvas: seleccionar elemento
+    Canvas -> Canvas: objSelected()
+    Canvas -> ActionButtons: props.objSelected
+    ActionButtons -> usuario: mostrar botones
+    usuario -> ActionButtons: seleccionar nota
+    ActionButtons -> usuario: mostrar input text nota
+    usuario -> ActionButtons: escribir en input text nota
+    ActionButtons -> ActionButtons: editNote()
+    ActionButtons -> itemsList: setNota()
+    itemsList --> ActionButtons
+    ActionButtons -> usuario: mostrar nota actualizada
+@enduml

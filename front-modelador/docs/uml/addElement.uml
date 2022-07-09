@@ -1,0 +1,18 @@
+@startuml addElement
+    usuario -> Sidebar: seleccionar elemnto
+    Sidebar -> usuario: resaltar elemento seleccionado
+    Sidebar -> App: itemSelected()
+    App -> Canvas: props.newItem
+    App -> NewItem: props.item
+    loop hasta soltar elemento
+        NewItem -> NewItem: actualizar elemento
+        NewItem -> usuario: mostrar elemento flotante
+        usuario -> NewItem: mover cursor
+    end
+    usuario -> Canvas: soltar elemento
+    Canvas -> Canvas: drawItem()
+    Canvas -> itemsList: push()
+    Canvas -> usuario: mostrar diagrama actualizado
+    App -> NewItem: props.item
+    NewItem -> NewItem: render null
+@enduml
